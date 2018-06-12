@@ -49,7 +49,9 @@ def execfile(file_relative_path, temp_globals=None, temp_locals=None):
 
     if temp_locals is None:
         temp_locals = {}
+    content = ""
     with open(test_file_path_name, 'rb') as file:
-        exec(compile(file.read(), test_file_path_name, 'exec'), temp_globals, temp_locals)
+        content = file.read()
+        exec(compile(content, test_file_path_name, 'exec'), temp_globals, temp_locals)
 
-    return temp_globals, temp_locals
+    return temp_globals, temp_locals, str(content)

@@ -1,14 +1,14 @@
 import unittest
 from test.unit_test_helper.console_test_helper import *
-import datetime
 
 
 class TestOutput(unittest.TestCase):
 
     def test(self):
-        temp_globals, temp_locals, content = execfile("lab01/ch01_t05_variables.py")
+        temp_globals, temp_locals, content = execfile("lab01/ch01_t12_boolean.py")
         print(temp_locals)
-        self.assertEqual(temp_locals['todays_date'], f"{datetime.datetime.now():%d/%m/%Y}")
+        self.assertFalse(temp_locals['age_is_12'])
+        self.assertTrue(temp_locals['name_is_maria'])
 
 
 if __name__ == '__main__':
