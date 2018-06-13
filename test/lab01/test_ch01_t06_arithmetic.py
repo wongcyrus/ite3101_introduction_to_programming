@@ -8,7 +8,7 @@ class TestOutput(unittest.TestCase):
         temp_globals, temp_locals, content = execfile("lab01/ch01_t06_arithmetic.py")
         print(temp_locals)
         self.assertIsInstance(temp_locals['product'], int)
-        self.assertEqual(temp_locals['remainder'], 1)
+        self.assertEqual(1, temp_locals['remainder'])
 
 
 if __name__ == '__main__':

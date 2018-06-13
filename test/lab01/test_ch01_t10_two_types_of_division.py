@@ -7,10 +7,10 @@ class TestOutput(unittest.TestCase):
     def test(self):
         temp_globals, temp_locals, content = execfile("lab01/ch01_t10_two_types_of_division.py")
         print(temp_locals)
-        self.assertEqual(temp_locals['cucumbers'], 100)
-        self.assertEqual(temp_locals['num_people'], 6)
-        self.assertEqual(temp_locals['whole_cucumbers_per_person'], 16)
-        self.assertEqual(temp_locals['float_cucumbers_per_person'], 16.666666666666668)
+        self.assertEqual(100, temp_locals['cucumbers'])
+        self.assertEqual(6, temp_locals['num_people'])
+        self.assertEqual(16, temp_locals['whole_cucumbers_per_person'])
+        self.assertEqual(16.666666666666668, temp_locals['float_cucumbers_per_person'])
 
 
 if __name__ == '__main__':

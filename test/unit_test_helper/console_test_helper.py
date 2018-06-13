@@ -1,6 +1,7 @@
 import sys
 from io import StringIO
 import contextlib
+from typing import Tuple, Union, Dict
 
 from unit_test_helper import is_answer
 
@@ -15,10 +16,10 @@ def stdout_io(stdout=None):
     sys.stdout = old
 
 
-def get_script_output(file_relative_path):
+def get_script_output(file_relative_path: str) -> str:
     test_file_path_name = get_path_name(file_relative_path)
 
-    print("testing file: ", test_file_path_name)
+    print("Testing file: ", test_file_path_name)
     with stdout_io() as s:
         try:
             with open(test_file_path_name, "r") as f:
@@ -26,10 +27,19 @@ def get_script_output(file_relative_path):
         except:
             print("File " + test_file_path_name + " not found!")
             return ""
-    return s.getvalue()
+    return str(s.getvalue())
 
 
-def get_path_name(file_relative_path):
+def exec_script(file_relative_path: str):
+    test_file_path_name = get_path_name(file_relative_path)
+    try:
+        with open(test_file_path_name, "r") as f:
+            exec(f.read())
+    except:
+        print("File " + test_file_path_name + " not found!")
+
+
+def get_path_name(file_relative_path: str) -> str:
     import os
     dirname, filename = os.path.split(os.path.abspath(__file__))
     test_file_path_name = dirname + "/../../lab/" + file_relative_path
@@ -38,7 +48,8 @@ def get_path_name(file_relative_path):
     return test_file_path_name
 
 
-def execfile(file_relative_path, temp_globals=None, temp_locals=None):
+def execfile(file_relative_path: str, temp_globals: dict = None, temp_locals: dict = None) -> \
+        Tuple[Union[Dict[str, str], dict], Union[dict, dict], str]:
     test_file_path_name = get_path_name(file_relative_path)
     if temp_globals is None:
         temp_globals = {}
@@ -49,7 +60,6 @@ def execfile(file_relative_path, temp_globals=None, temp_locals=None):
 
     if temp_locals is None:
         temp_locals = {}
-    content = ""
     with open(test_file_path_name, 'rb') as file:
         content = file.read()
         exec(compile(content, test_file_path_name, 'exec'), temp_globals, temp_locals)

@@ -7,9 +7,9 @@ class TestOutput(unittest.TestCase):
     def test(self):
         temp_globals, temp_locals, content = execfile("lab02/ch02_t02_practice.py")
         print(temp_locals)
-        self.assertEqual(temp_locals['caesar'], 'Graham')
-        self.assertEqual(temp_locals['praline'], 'John')
-        self.assertEqual(temp_locals['viking'], 'Teresa')
+        self.assertEqual('Graham', temp_locals['caesar'])
+        self.assertEqual('John', temp_locals['praline'])
+        self.assertEqual('Teresa', temp_locals['viking'])
 
 
 if __name__ == '__main__':
