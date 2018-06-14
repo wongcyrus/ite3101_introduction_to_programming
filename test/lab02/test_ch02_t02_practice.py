@@ -5,7 +5,7 @@ from test.unit_test_helper.console_test_helper import *
 class TestOutput(unittest.TestCase):
 
     def test(self):
-        temp_globals, temp_locals, content = execfile("lab02/ch02_t02_practice.py")
+        temp_globals, temp_locals, content, output = execfile("lab02/ch02_t02_practice.py")
         print(temp_locals)
         self.assertEqual('Graham', temp_locals['caesar'])
         self.assertEqual('John', temp_locals['praline'])

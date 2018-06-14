@@ -5,7 +5,7 @@ from test.unit_test_helper.console_test_helper import *
 class TestOutput(unittest.TestCase):
 
     def test(self):
-        temp_globals, temp_locals, content = execfile("lab01/ch01_t10_two_types_of_division.py")
+        temp_globals, temp_locals, content, output = execfile("lab01/ch01_t10_two_types_of_division.py")
         print(temp_locals)
         self.assertEqual(100, temp_locals['cucumbers'])
         self.assertEqual(6, temp_locals['num_people'])

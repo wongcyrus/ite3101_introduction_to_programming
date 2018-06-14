@@ -49,7 +49,7 @@ def get_path_name(file_relative_path: str) -> str:
 
 
 def execfile(file_relative_path: str, temp_globals: dict = None, temp_locals: dict = None) -> \
-        Tuple[Union[Dict[str, str], dict], Union[dict, dict], str]:
+        Tuple[Union[Dict[str, str], dict], Union[dict, dict], str, str]:
     test_file_path_name = get_path_name(file_relative_path)
     if temp_globals is None:
         temp_globals = {}
@@ -60,8 +60,12 @@ def execfile(file_relative_path: str, temp_globals: dict = None, temp_locals: di
 
     if temp_locals is None:
         temp_locals = {}
-    with open(test_file_path_name, 'rb') as file:
-        content = file.read()
-        exec(compile(content, test_file_path_name, 'exec'), temp_globals, temp_locals)
-
-    return temp_globals, temp_locals, str(content)
+    content = ""
+    with stdout_io() as s:
+        try:
+            with open(test_file_path_name, 'rb') as file:
+                content = file.read()
+                exec(compile(content, test_file_path_name, 'exec'), temp_globals, temp_locals)
+        except:
+            print("File " + test_file_path_name + " not found!")
+    return temp_globals, temp_locals, str(content), str(s.getvalue())

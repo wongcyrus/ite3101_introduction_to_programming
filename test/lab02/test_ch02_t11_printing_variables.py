@@ -5,7 +5,7 @@ from test.unit_test_helper.console_test_helper import *
 class TestOutput(unittest.TestCase):
 
     def test_variable(self):
-        temp_globals, temp_locals, content = execfile("lab02/ch02_t11_printing_variables.py")
+        temp_globals, temp_locals, content, output = execfile("lab02/ch02_t11_printing_variables.py")
         print(temp_locals)
         self.assertEqual('Ping!', temp_locals['the_machine_goes'])
 

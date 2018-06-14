@@ -5,7 +5,7 @@ from test.unit_test_helper.console_test_helper import *
 class TestOutput(unittest.TestCase):
 
     def test(self):
-        temp_globals, temp_locals, content = execfile("lab01/ch01_t14_review.py")
+        temp_globals, temp_locals, content, output = execfile("lab01/ch01_t14_review.py")
         print(temp_locals)
         self.assertEqual('Python Syntax', temp_locals['skill_completed'])
         self.assertEqual(13, temp_locals['exercises_completed'])
