@@ -1,4 +1,3 @@
-
 import unittest
 from test.unit_test_helper.console_test_helper import *
 
@@ -13,4 +12,3 @@ class TestOutput(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
