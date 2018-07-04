@@ -1,3 +1,0 @@
-absolute =
-
-print(absolute)

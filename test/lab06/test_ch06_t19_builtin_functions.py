@@ -1,4 +1,3 @@
-# ch06_t19_builtin_functions
 import types
 import unittest
 from test.unit_test_helper.console_test_helper import *
