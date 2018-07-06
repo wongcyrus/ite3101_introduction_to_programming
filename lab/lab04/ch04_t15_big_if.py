@@ -1,5 +1,5 @@
 # Complete the if and elif statements!
-def grade_converter(grade):
+def grade_converter(grade: int) -> str:
     if None:
         return "A"
     elif None:

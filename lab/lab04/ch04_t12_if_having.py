@@ -1,9 +1,9 @@
-def using_control_once():
+def using_control_once() -> str:
     if None:
         return "Success #1"
 
 
-def using_control_again():
+def using_control_again() -> str:
     if None:
         return "Success #2"
 

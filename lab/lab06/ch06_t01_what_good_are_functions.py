@@ -1,11 +1,11 @@
-def tax(bill):
+def tax(bill: float) -> float:
     """Adds 8% tax to a restaurant bill."""
     bill *= 1.08
     print("With tax: %f" % bill)
     return bill
 
 
-def tip(bill):
+def tip(bill: float) -> float:
     """Adds 15% tip to a restaurant bill."""
     bill *= 1.15
     print("With tip: %f" % bill)
