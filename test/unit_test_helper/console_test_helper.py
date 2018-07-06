@@ -24,7 +24,7 @@ def get_script_output(file_relative_path: str) -> str:
         try:
             with open(test_file_path_name, "r") as f:
                 exec(f.read())
-        except:
+        except FileNotFoundError:
             print("File " + test_file_path_name + " not found!")
             return ""
     return str(s.getvalue())
@@ -35,7 +35,7 @@ def exec_script(file_relative_path: str):
     try:
         with open(test_file_path_name, "r") as f:
             exec(f.read())
-    except:
+    except FileNotFoundError:
         print("File " + test_file_path_name + " not found!")
 
 

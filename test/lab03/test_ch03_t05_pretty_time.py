@@ -10,7 +10,7 @@ class TestOutput(unittest.TestCase):
         print(output)
         now = temp_locals['now']
 
-        expected = '%02d-%02d-%04d' % (now.month, now.day, now.year) + "\n"
+        expected = '%02d:%02d:%02d' % (now.hour, now.minute, now.second) + "\n"
         self.assertIsNotNone(temp_locals['now'])
         self.assertEqual(expected, output)
 

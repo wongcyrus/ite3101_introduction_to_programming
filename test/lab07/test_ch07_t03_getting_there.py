@@ -1,4 +1,3 @@
-# ch07_t03_getting_there
 import types
 import unittest
 from test.unit_test_helper.console_test_helper import *
