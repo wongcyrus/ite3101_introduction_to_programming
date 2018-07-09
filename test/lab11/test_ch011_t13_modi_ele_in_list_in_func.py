@@ -1,4 +1,3 @@
-# ch011_t13_modi_ele_in_list_in_func
 import unittest
 
 from unit_test_helper import is_answer
