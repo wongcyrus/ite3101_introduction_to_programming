@@ -2,8 +2,8 @@ for letter in "Codecademy":
     print(letter)
 
 # Empty lines to make the output pretty
-print
-print
+print()
+print()
 
 word = "Programming is fun!"
 
