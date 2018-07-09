@@ -13,7 +13,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab07/ch07_t07_plan_your_trip.py", globals())
-        print(output)
+
         print(temp_locals)
         self.assertIsInstance(temp_locals['trip_cost'], types.FunctionType)
         self.assertEqual(1815, trip_cost("Los Angeles", 5, 600))

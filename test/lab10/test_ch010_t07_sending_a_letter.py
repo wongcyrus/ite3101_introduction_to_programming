@@ -14,12 +14,12 @@ class TestOutput(unittest.TestCase):
         self.assertEqual("A", get_letter_grade(90))
         self.assertEqual("B", get_letter_grade(80))
         self.assertEqual("C", get_letter_grade(70))
-        self.assertEqual("d", get_letter_grade(60))
+        self.assertEqual("D", get_letter_grade(60))
         self.assertEqual("F", get_letter_grade(50))
 
     def testOutput(self):
         temp_globals, temp_locals, content, output = execfile("lab10/ch010_t07_sending_a_letter.py", globals())
-        print(output)
+
         expected = """B
 """
         self.assertEqual(expected, output)

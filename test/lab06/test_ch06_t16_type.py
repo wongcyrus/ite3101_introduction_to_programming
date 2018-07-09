@@ -7,7 +7,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab06/ch06_t16_type.py")
-        print(output)
+
         self.assertEqual("""<class 'int'>
 <class 'float'>
 <class 'str'>

@@ -1,3 +1,5 @@
+from typing import List
+
 shopping_list = ["banana", "orange", "apple"]
 
 stock = {
@@ -16,7 +18,7 @@ prices = {
 
 
 # Write your code below!
-def compute_bill(food):
+def compute_bill(food: List[str]):
     total = 0
     for item in food:
         total += prices[item]

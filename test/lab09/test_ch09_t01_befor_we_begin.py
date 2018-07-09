@@ -7,7 +7,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab09/ch09_t01_befor_we_begin.py")
-        print(output)
+
         expected = """Adam
 Alex
 Mariah

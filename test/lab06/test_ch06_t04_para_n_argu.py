@@ -18,7 +18,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab06/ch06_t04_para_n_argu.py")
-        print(output)
+
         expected = "37 to the power of 4 is 1874161.\n"
         self.assertEqual(expected, output)
 

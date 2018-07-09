@@ -1,4 +1,7 @@
-def list_function(x):
+from typing import List
+
+
+def list_function(x: List[int]) -> int:
     return x[1]
 
 

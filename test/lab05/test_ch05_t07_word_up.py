@@ -18,14 +18,14 @@ class TestOutput(unittest.TestCase):
         user_input = ["Cyrus!"]
         with patch('builtins.input', side_effect=user_input):
             temp_globals, temp_locals, content, output = execfile("lab05/ch05_t07_word_up.py")
-        print(output)
+
         self.assertEqual("empty\n", output)
 
     def test_empty_input(self):
         user_input = [""]
         with patch('builtins.input', side_effect=user_input):
             temp_globals, temp_locals, content, output = execfile("lab05/ch05_t07_word_up.py")
-        print(output)
+
         self.assertEqual("empty\n", output)
 
 

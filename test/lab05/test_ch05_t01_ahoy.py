@@ -6,7 +6,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab05/ch05_t01_ahoy.py")
-        print(output)
+
         expected = "Pig Latin\n"
         self.assertEqual(expected, output)
 

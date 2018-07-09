@@ -16,7 +16,7 @@ class TestOutput(unittest.TestCase):
 
     def testOutput(self):
         temp_globals, temp_locals, content, output = execfile("lab10/ch010_t09_how_is_everybody_doing.py", globals())
-        print(output)
+
         expected = """B
 83.86666666666666
 """

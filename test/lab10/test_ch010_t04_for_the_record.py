@@ -7,7 +7,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab10/ch010_t04_for_the_record.py")
-        print(output)
+
         expected = """Lloyd
 [90.0, 97.0, 75.0, 92.0]
 [88.0, 40.0, 94.0]

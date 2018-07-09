@@ -6,7 +6,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab09/ch09_t09_something_value.py")
-        print(output)
+
         expected = """banana
 price: 4
 stock: 6

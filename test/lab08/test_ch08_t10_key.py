@@ -6,7 +6,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab08/ch08_t10_key.py")
-        print(output)
+
         expected = """104
 105
 106

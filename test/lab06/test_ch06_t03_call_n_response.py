@@ -13,7 +13,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab06/ch06_t03_call_n_response.py")
-        print(output)
+
         expected = "10 squared is 100.\n"
         self.assertEqual(expected, output)
 

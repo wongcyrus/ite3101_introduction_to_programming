@@ -6,7 +6,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab08/ch08_t02_access_by_index.py")
-        print(output)
+
         expected = """Adding the numbers at indices 0 and 2...
 12
 Adding the numbers at indices 1 and 3...

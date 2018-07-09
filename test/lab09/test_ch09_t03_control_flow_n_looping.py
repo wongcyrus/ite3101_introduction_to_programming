@@ -6,7 +6,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab09/ch09_t03_control_flow_n_looping.py")
-        print(output)
+
         expected = """0
 2
 4

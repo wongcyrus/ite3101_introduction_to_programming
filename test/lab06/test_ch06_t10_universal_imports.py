@@ -7,7 +7,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab06/ch06_t10_universal_imports.py")
-        print(output)
+
         self.assertEqual("5.0\n", output)
         print(content)
         print(content.count("math"))

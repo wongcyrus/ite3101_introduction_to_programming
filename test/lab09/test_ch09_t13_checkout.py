@@ -17,7 +17,7 @@ class TestOutput(unittest.TestCase):
 
     def testOutput(self):
         temp_globals, temp_locals, content, output = execfile("lab09/ch09_t13_checkout.py", globals())
-        print(output)
+
         expected = """5.5
 """
         self.assertEqual(expected, output)

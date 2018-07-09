@@ -6,7 +6,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab04/ch04_t14_elif.py")
-        print(output)
+
         expected = """-1
 0
 1

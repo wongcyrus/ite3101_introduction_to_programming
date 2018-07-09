@@ -7,7 +7,7 @@ class TestOutput(unittest.TestCase):
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab03/ch03_t03_extracting_Info.py")
         print(temp_locals)
-        print(output)
+
         now = temp_locals['now']
 
         expected = str(now) + "\n" + \

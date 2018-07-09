@@ -6,7 +6,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab09/ch09_t05_string_looping.py")
-        print(output)
+
         expected = """C
 o
 d

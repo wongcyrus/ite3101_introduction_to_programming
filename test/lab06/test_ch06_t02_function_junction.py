@@ -12,7 +12,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab06/ch06_t02_function_junction.py")
-        print(output)
+
         expected = "Eggs!\n"
         self.assertEqual(expected, output)
 

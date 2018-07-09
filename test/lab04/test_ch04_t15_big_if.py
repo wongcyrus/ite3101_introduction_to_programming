@@ -6,7 +6,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab04/ch04_t15_big_if.py")
-        print(output)
+
         expected = """A
 C
 F

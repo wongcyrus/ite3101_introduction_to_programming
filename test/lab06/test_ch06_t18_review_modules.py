@@ -7,7 +7,7 @@ class TestOutput(unittest.TestCase):
 
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab06/ch06_t18_review_modules.py")
-        print(output)
+
         self.assertEqual("117.0\n", output)
 
 

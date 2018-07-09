@@ -7,7 +7,7 @@ class TestOutput(unittest.TestCase):
     def test(self):
         temp_globals, temp_locals, content, output = execfile("lab03/ch03_t05_pretty_time.py")
         print(temp_locals)
-        print(output)
+
         now = temp_locals['now']
 
         expected = '%02d:%02d:%02d' % (now.hour, now.minute, now.second) + "\n"
