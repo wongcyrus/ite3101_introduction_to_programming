@@ -17,4 +17,9 @@ tyler = {
     "tests": [100.0, 100.0]
 }
 
+
+def average(numbers):
+    total = sum(numbers)
+    return total / len(numbers)
+
 # Add your function below!

@@ -18,7 +18,11 @@ tyler = {
 }
 
 
-# Add your function below!
+def average(numbers):
+    total = sum(numbers)
+    return total / len(numbers)
+
+
 def get_average(student):
     homework = average(student["homework"])
     quizzes = average(student["quizzes"])
@@ -47,3 +51,5 @@ def get_class_average(class_list):
     for student in class_list:
         results.append(get_average(student))
     return average(results)
+
+# Add code below!
