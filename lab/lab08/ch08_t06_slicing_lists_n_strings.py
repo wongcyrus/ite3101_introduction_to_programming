@@ -1,10 +1,10 @@
 animals = "catdogfrog"
 
 # The first three characters of animals
-cat = animals[:3]
+cat = None
 
 # The fourth through sixth characters
-dog = animals[3:6]
+dog = None
 
 # From the seventh character to the end
-frog = animals[6:]
+frog = None

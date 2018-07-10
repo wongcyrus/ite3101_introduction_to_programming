@@ -1,6 +1,6 @@
+import contextlib
 import sys
 from io import StringIO
-import contextlib
 from typing import Tuple, Union, Dict
 
 from unit_test_helper import is_answer
@@ -14,6 +14,12 @@ def stdout_io(stdout=None):
     sys.stdout = stdout
     yield stdout
     sys.stdout = old
+
+
+def get_function_output(func):
+    with stdout_io() as s:
+        value = func()
+    return str(s.getvalue()), value
 
 
 def get_script_output(file_relative_path: str) -> str:
@@ -70,3 +76,7 @@ def execfile(file_relative_path: str, temp_globals: dict = None, temp_locals: di
             print("File " + test_file_path_name + " not found!")
 
     return temp_globals, temp_locals, str(content), str(s.getvalue())
+
+
+def mock_randint(a, b):
+    return 1
