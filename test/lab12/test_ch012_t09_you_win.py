@@ -3,7 +3,7 @@ import unittest
 from unittest.mock import patch
 
 from unit_test_helper import is_answer
-from unit_test_helper.console_test_helper import get_function_output, mock_randint
+from unit_test_helper.console_test_helper import get_function_output
 
 
 def load():
@@ -17,13 +17,13 @@ def load():
 class TestOutput(unittest.TestCase):
 
     @patch("builtins.input", side_effect=["1", "1"])
-    @patch("random.randint", mock_randint)
+    @patch("random.randint", lambda x, y: 1)
     def test_guess_correct(self, mock_input):
         output, value = get_function_output(load)
         self.assertTrue("Congratulations! You sank my battleship!" in output)
 
     @patch("builtins.input", side_effect=["1", "2"])
-    @patch("random.randint", mock_randint)
+    @patch("random.randint", lambda x, y: 1)
     def test_guess_incorrect(self, mock_input):
         output, value = get_function_output(load)
         self.assertFalse("Congratulations! You sank my battleship!" in output)

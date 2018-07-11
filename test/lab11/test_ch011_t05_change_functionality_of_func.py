@@ -12,12 +12,12 @@ else:
 class TestOutput(unittest.TestCase):
 
     def test(self):
-        self.assertEqual(8, my_function(number))
+        self.assertEqual(15, my_function(number))
 
     def testOutput(self):
         temp_globals, temp_locals, content, output = execfile("lab11/ch011_t05_change_functionality_of_func.py")
 
-        expected = """8
+        expected = """15
 """
         self.assertEqual(expected, output)
 
