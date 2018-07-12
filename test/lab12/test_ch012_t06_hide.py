@@ -1,4 +1,3 @@
-# ch012_t06_hide
 import unittest
 
 from unit_test_helper import is_answer

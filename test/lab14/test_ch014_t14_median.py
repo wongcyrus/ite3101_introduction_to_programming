@@ -1,4 +1,3 @@
-# ch014_t14_median
 import unittest
 from unit_test_helper import is_answer
 
