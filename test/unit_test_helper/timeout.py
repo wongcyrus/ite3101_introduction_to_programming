@@ -4,7 +4,6 @@ import platform
 import signal
 from functools import wraps
 from threading import Timer
-from time import sleep
 
 
 def timeout(seconds=10, error_message=os.strerror(errno.ETIME)):
