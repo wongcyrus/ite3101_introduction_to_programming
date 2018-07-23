@@ -1,8 +1,7 @@
 class Car(object):
-    condition = "new"
 
     def __init__(self):
-        pass
+        self.condition = "new"
 
 
 my_car = Car()
