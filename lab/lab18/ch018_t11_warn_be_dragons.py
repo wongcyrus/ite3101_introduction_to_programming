@@ -1,7 +1,7 @@
 class Customer(object):
     """Produces objects that represent customers."""
 
-    def __init__(self, customer_id):
+    def __init__(self, customer_id: str):
         self.customer_id = customer_id
 
     def display_cart(self):

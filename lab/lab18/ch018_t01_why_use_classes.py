@@ -1,7 +1,7 @@
 class Fruit(object):
     """A class that makes various tasty fruits."""
 
-    def __init__(self, name, color, flavor, poisonous):
+    def __init__(self, name: str, color: str, flavor: str, poisonous: bool):
         self.name = name
         self.color = color
         self.flavor = flavor
