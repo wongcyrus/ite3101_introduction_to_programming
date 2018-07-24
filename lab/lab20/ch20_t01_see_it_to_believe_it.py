@@ -1,7 +1,7 @@
 my_list = [i ** 2 for i in range(1, 11)]
 # Generates a list of squares of the numbers 1 - 10
 
-f = open("ch020_t01o_output.txt", "w")
+f = open("ch20_t01o_output.txt", "w")
 
 for item in my_list:
     f.write(str(item) + "\n")
