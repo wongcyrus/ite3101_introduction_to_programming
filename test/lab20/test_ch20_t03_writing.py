@@ -20,9 +20,20 @@ class TestOutput(unittest.TestCase):
         if os.path.isfile(self.filename):
             os.remove(self.filename)
 
+    @staticmethod
+    def cmp_lines(path_1: str, path_2: str):
+        l1 = l2 = ' '
+        with open(path_1, 'r') as f1, open(path_2, 'r') as f2:
+            while l1 != '' and l2 != '':
+                l1 = f1.readline()
+                l2 = f2.readline()
+                if l1 != l2:
+                    return False
+        return True
+
     def test(self):
         self.assertIsInstance(my_file, TextIOWrapper)
-        self.assertTrue(filecmp.cmp(self.filename, "output/ch20_t03o_output_ans.txt"))
+        self.assertTrue(self.cmp_lines(self.filename, "output/ch20_t03o_output_ans.txt"))
 
 
 if __name__ == '__main__':
