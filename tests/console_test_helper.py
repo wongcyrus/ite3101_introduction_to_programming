@@ -3,6 +3,8 @@ import sys
 from io import StringIO
 from typing import Tuple, Union, Dict
 
+is_answer = False
+
 
 @contextlib.contextmanager
 def stdout_io(stdout=None):
@@ -74,6 +76,3 @@ def execfile(file_relative_path: str, temp_globals: dict = None, temp_locals: di
             print("File " + test_file_path_name + " not found!")
 
     return temp_globals, temp_locals, str(content), str(s.getvalue())
-
-
-is_answer = True
