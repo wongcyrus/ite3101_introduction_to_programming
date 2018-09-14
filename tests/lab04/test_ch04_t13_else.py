@@ -5,7 +5,7 @@ from ..console_test_helper import is_answer
 if is_answer:
     from lab.lab04.ch04_t13_else_ans import black_knight, french_soldier
 else:
-    from lab.lab04.ch04_t12_else import black_knight, french_soldier
+    from lab.lab04.ch04_t13_else import black_knight, french_soldier
 
 
 class TestOutput(unittest.TestCase):
