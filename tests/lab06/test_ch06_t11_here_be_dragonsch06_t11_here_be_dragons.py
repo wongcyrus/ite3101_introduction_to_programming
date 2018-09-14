@@ -1,3 +1,4 @@
+import math
 import unittest
 
 from ..console_test_helper import *
