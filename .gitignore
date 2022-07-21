@@ -137,7 +137,6 @@ celerybeat-schedule
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -158,4 +157,5 @@ venv.bak/
 # mypy
 .mypy_cache/
 *_ans.py
-*_ans
+
+lab/lab20/outputs/*.txt

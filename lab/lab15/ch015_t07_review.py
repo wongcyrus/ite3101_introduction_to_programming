@@ -1,5 +1,13 @@
 from typing import List
 
+# The following 6 lines of codes are for UnitTest and you don't need them for your real applications!
+global grades
+global grades_sum
+global grades_average
+global print_grades
+global grades_variance
+global grades_std_deviation
+
 grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
 
 

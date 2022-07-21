@@ -1,4 +1,13 @@
 from typing import List
+# The following 7 lines of codes are for UnitTest and you don't need them for your real applications!
+global lloyd
+global alice
+global tyler
+global average
+global get_average
+global get_letter_grade
+global get_class_average
+
 
 lloyd = {
     "name": "Lloyd",

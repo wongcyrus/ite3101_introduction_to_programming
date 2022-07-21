@@ -1,4 +1,4 @@
-# key - animal_name : value - location 
+# key - animal_name : value - location
 zoo_animals = {'Unicorn': 'Cotton Candy House',
                'Sloth': 'Rainforest Exhibit',
                'Bengal Tiger': 'Jungle House',

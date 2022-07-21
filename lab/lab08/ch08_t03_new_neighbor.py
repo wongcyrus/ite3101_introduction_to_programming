@@ -1,5 +1,5 @@
 zoo_animals = ["pangolin", "cassowary", "sloth", "tiger"]
-# Last night our zoo's sloth brutally attacked 
+# Last night our zoo's sloth brutally attacked
 # the poor tiger and ate it whole.
 
 # The ferocious sloth has been replaced by a friendly hyena.

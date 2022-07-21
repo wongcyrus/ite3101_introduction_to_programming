@@ -8,7 +8,8 @@ class Fruit(object):
         self.poisonous = poisonous
 
     def description(self):
-        print("I'm a %s %s and I taste %s." % (self.color, self.name, self.flavor))
+        print("I'm a %s %s and I taste %s." %
+              (self.color, self.name, self.flavor))
 
     def is_edible(self):
         if not self.poisonous:

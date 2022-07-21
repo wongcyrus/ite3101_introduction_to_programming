@@ -12,7 +12,7 @@ def grade_converter(grade: int) -> str:
         return "F"
 
 
-# This should print an "A"      
+# This should print an "A"
 print(grade_converter(92))
 
 # This should print a "C"
