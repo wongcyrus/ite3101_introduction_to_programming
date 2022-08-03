@@ -1,8 +1,9 @@
 # Python exercises
 
-# Windows
-## Change Powershell execution policy
+## Windows
+### Change Powershell execution policy
 
+Demo of setting up the Execution Policy.
 https://youtu.be/R11kUjafVEo?list=PLtgJR0xD2TPdBfg5oIKseNuN0tX_DgPkH&t=1738
 
 Open a Powershell window as administrator and type the following:
@@ -16,7 +17,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-# Codespace
+## Codespace
 It is fine to use the Linus Python interpreter directly, as you can delete Codepace and create new one if there is any problem easily.
 ```
 pip install -r requirements.txt
