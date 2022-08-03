@@ -1,0 +1,204 @@
+{
+  "tests": [
+    {
+      "name": "Lab 01",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab01",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 02",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab02",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 03",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab03",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 04",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab04",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 05",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab05",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 06",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab06",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 07",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab07",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 08",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab08",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 09",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab09",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 10",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab10",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 11",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab11",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 12",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab12",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 13",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab13",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 14",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab14",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 15",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab15",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 16",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab16",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 17",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab17",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 18",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab18",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 19",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab19",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Lab 20",
+      "setup": "sudo -H pip3 install pytest",
+      "run": "pytest -x tests/lab20",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}

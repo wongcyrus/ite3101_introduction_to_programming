@@ -13,7 +13,11 @@
         "commands": [  
             {
                 "match": "lab\/.+py",
-                "cmd": "python ${fileDirname}/../../send_to_azure_function_grader.py ${file}",
+                "cmd": "python ${fileDirname}/../../auto_grader.py ${file}",
+            },
+            {
+                "match": "lab\\\\.+py",
+                "cmd": "${fileDirname}\\..\\..\\.venv\\Scripts\\activate.bat && python ${fileDirname}\\..\\..\\auto_grader.py ${file}",
             }
         ]
     }
