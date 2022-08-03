@@ -1,21 +1,21 @@
-import sys
-from pathlib import Path
-import requests
-import pytest
 import os
 import shutil
+import sys
+from pathlib import Path
+
+import pytest
+import requests
 from git import Repo
 
-API_KEY = ""
-API_ENDPOINT = 'https://api-grading-engine-assignment.azure-api.net/pytester'
-
+from config import API_ENDPOINT, API_KEY
 
 PATH_OF_GIT_REPO = r'.git'  # make sure .git folder is properly configured
 
 
 def git_push(message):
     try:
-        shutil.copyfile('lab/autograding.json', '.github/classroom/autograding.json')
+        shutil.copyfile('lab/autograding.json',
+                        '.github/classroom/autograding.json')
         repo = Repo(PATH_OF_GIT_REPO)
         repo.git.add(update=True)
         repo.index.commit(message)
@@ -45,13 +45,13 @@ try:
         print("Test Failed!")
         git_push("[skip actions] " + sourceCodeFilePath)
         sys.exit(0)
-    else:        
+    else:
         data = {
             "sourceCodeFilePath": sourceCodeFilePath,
             "sourceCode": code
         }
         print("Calling to Azure function and run test now, please wait.")
-        r = requests.post(API_ENDPOINT, json=data,
+        r = requests.post(API_ENDPOINT+"/pytester", json=data,
                           headers={"Ocp-Apim-Subscription-Key": API_KEY})
         print(r.status_code)
         print(r.text)
