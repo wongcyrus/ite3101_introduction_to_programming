@@ -1,6 +1,14 @@
 # Python exercises
 
 # Windows
+## Change Powershell execution policy
+
+https://youtu.be/R11kUjafVEo?list=PLtgJR0xD2TPdBfg5oIKseNuN0tX_DgPkH&t=1738
+
+Open a Powershell window as administrator and type the following:
+```Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser```
+Then respond y to any questions.
+
 You need to use create virtual environment as you should not corrupt your Python in Windows.
 ```
 python -m venv .venv
