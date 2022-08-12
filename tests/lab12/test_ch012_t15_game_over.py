@@ -1,3 +1,4 @@
+import importlib
 import sys
 import unittest
 from unittest.mock import patch
@@ -9,12 +10,11 @@ from tests.unit_test_helper.console_test_helper import get_function_output
 class TestOutput(unittest.TestCase):
 
     def load(self):
-        self.myModule = __import__('lab.lab12.ch012_t15_game_over' + "_ans" if is_answer else "", globals(), locals(),
-                                   [''], 0)
+        self.my_module = importlib.import_module(
+            'lab.lab12.ch012_t15_game_over' + ("_ans" if is_answer else ""))
 
     def tearDown(self):
-        del sys.modules[self.myModule.__name__]
-        return
+        del sys.modules[self.my_module.__name__]
 
     @patch("builtins.input", side_effect=["1", "1", "1", "1", "1", "1", "1", "1"])
     @patch("random.randint", lambda x, y: 1)
