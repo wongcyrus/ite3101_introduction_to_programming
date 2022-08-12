@@ -11,7 +11,7 @@ from tests.unit_test_helper.timeout import timeout
 class TestOutput(unittest.TestCase):
     def load(self):
         self.my_module = importlib.import_module(
-            'lab.lab12.ch013_t08_yr_own_while_else' + ("_ans" if is_answer else ""))
+            'lab.lab13.ch013_t08_yr_own_while_else' + ("_ans" if is_answer else ""))
 
     def tearDown(self):
         del sys.modules[self.my_module.__name__]
