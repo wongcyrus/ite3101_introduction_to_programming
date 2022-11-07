@@ -1,3 +1,0 @@
-parrot = "Norwegian Blue"
-
-print()
