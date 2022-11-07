@@ -1,2 +1,2 @@
 API_KEY = ""
-API_ENDPOINT = 'https://api-grading-engine-assignment.azure-api.net'
+API_ENDPOINT = 'https://api-pytest-runner-azure-2223.azure-api.net'

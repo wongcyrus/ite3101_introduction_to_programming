@@ -12,7 +12,7 @@ class TestOutput(unittest.TestCase):
 
     def load(self):
         self.my_module = importlib.import_module(
-            'lab.lab12.ch013_t10_for_yr_hobbies' + ("_ans" if is_answer else ""))
+            'lab.lab13.ch013_t10_for_yr_hobbies' + ("_ans" if is_answer else ""))
 
     def tearDown(self):
         del sys.modules[self.my_module.__name__]
@@ -21,8 +21,8 @@ class TestOutput(unittest.TestCase):
     @patch("builtins.input", side_effect=["swimming", "running", "football"])
     def test(self, mock_input):
         output, value = get_function_output(lambda: self.load())
-        expect = ['swimming', 'running', 'football']
-        self.assertListEqual(expect, value)
+        expect = "['swimming', 'running', 'football']\n"
+        self.assertEqual(expect, output)
 
 
 if __name__ == '__main__':

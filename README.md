@@ -17,6 +17,15 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
+## macOS
+
+Follow the above demo of Windows version, but you don't need to open Powershell to type that Execution Policy command. The same thing you have to do is to create virtual environment as you should not corrupt your Python in macOS. The code will be a bit different.
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
 ## Codespace
 It is fine to use the Linus Python interpreter directly, as you can delete Codepace and create new one if there is any problem easily.
 ```

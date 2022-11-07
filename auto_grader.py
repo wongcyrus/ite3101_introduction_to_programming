@@ -32,7 +32,7 @@ try:
     argumentList = sys.argv[1:]
     print(argumentList)
 
-    sourceCodeFilePath = sep.join(argumentList[0].split(sep)[3:])
+    sourceCodeFilePath = sep.join(argumentList[0].split(sep)[-3:])
 
     print(sourceCodeFilePath)
     code = Path(argumentList[0]).read_text()
