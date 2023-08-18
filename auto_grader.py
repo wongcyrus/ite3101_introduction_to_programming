@@ -10,7 +10,7 @@ from git import Repo
 from config import API_ENDPOINT, API_KEY
 
 PATH_OF_GIT_REPO = r'.git'  # make sure .git folder is properly configured
-sep = os.sep
+SEP = os.sep
 
 
 def git_push(message):
@@ -23,42 +23,39 @@ def git_push(message):
         origin = repo.remote(name='origin')
         origin.push()
         print("Commit and push with message: " + message)
-    except BaseException as ex:
-        print(ex)
+    except BaseException as bex:
+        print(bex)
         print('Some error occured while pushing the code')
 
 
 try:
-    argumentList = sys.argv[1:]
-    print(argumentList)
-
-    sourceCodeFilePath = sep.join(argumentList[0].split(sep)[-3:])
-
-    print(sourceCodeFilePath)
-    code = Path(argumentList[0]).read_text()
+    argument_list = sys.argv[1:]
+    print(argument_list)
+    source_code_file_path = SEP.join(argument_list[0].split(SEP)[-3:])
+    print(source_code_file_path)
+    code = Path(argument_list[0]).read_text()
     print(code)
 
-    source_code_file_path_segments = sourceCodeFilePath.split(sep)
+    source_code_file_path_segments = source_code_file_path.split(SEP)
     test_code_file_path = os.path.join(
         "tests", source_code_file_path_segments[1], "test_"+source_code_file_path_segments[2])
     print(test_code_file_path)
     retcode = pytest.main(["-x", test_code_file_path])
     if pytest.ExitCode.OK != retcode:
         print("Test Failed!")
-        git_push("[skip actions] " + sourceCodeFilePath)        
+        git_push("[skip actions] " + source_code_file_path)        
     else:
-        # Azure function is Linux.
+        # Google Cloud function is Linux.
         data = {
-            "sourceCodeFilePath": sourceCodeFilePath.replace(sep,"/"),
+            "sourceCodeFilePath": source_code_file_path.replace(SEP,"/"),
             "sourceCode": code
         }
-        print("Calling to Azure function and run test now, please wait.")
-        r = requests.post(API_ENDPOINT+"/pytester", json=data,
-                          headers={"Ocp-Apim-Subscription-Key": API_KEY})
+        print("Calling to Google Cloud function and run test now, please wait.")
+        r = requests.post(API_ENDPOINT+"/pytest?key="+API_KEY, json=data)
         print(r.status_code)
         print(r.text)
         if r.text != "Repeated Successful Test.":
-            git_push(sourceCodeFilePath)
+            git_push(source_code_file_path)
 
 except BaseException as ex:
     print(f"Unexpected {ex=}, {type(ex)=}")
