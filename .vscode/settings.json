@@ -13,9 +13,11 @@
         ]
     },
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 3000,
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.autopep8"
-    },
-    "editor.formatOnSave": true
+    "files.autoSaveDelay": 3000, 
+    "editor.formatOnSave": true,    
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }
