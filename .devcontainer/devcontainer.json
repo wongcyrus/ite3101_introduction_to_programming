@@ -20,7 +20,26 @@
 		"vscode": {
 			// Set *default* container specific settings.json values on container create.
 			"settings": {
-				"python.defaultInterpreterPath": "/usr/local/bin/python"
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.testing.pytestArgs": [],
+				"python.testing.unittestEnabled": false,
+				"python.testing.pytestEnabled": true,
+				"python.analysis.extraPaths": [
+					"./tests/unit_test_helper"
+				],
+				"pylint.args": [
+					"--disable=C0111"
+				],
+				"pylint.path": [
+					"/usr/local/py-utils/bin/pylint"
+				],
+				"flake8.path": [
+					"/usr/local/py-utils/bin/flake8"
+				],
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.autopep8",
+					"editor.formatOnSave": true
+				}
 			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
