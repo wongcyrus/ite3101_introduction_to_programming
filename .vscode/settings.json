@@ -5,9 +5,19 @@
     "python.analysis.extraPaths": [
         "./tests/unit_test_helper"
     ],
-    "python.linting.pylintArgs": [
+    "pylint.args": [
         "--disable=C0111"
     ],
+    "pylint.path": [
+        "/usr/local/py-utils/bin/pylint"
+    ],
+    "flake8.path":[
+        "/usr/local/py-utils/bin/flake8"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8",
+        "editor.formatOnSave": true
+    },
     "emeraldwalk.runonsave": {
         "autoClearConsole": true,
         "commands": [
