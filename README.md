@@ -1,5 +1,8 @@
 # Python exercises
 
+## Codespace
+You can click one the top Codespace icon and you will get a new Codespace. However, if you crash your Codespace, you still need to delete and re-create a new one. 
+
 ## Windows
 ### Change Powershell execution policy
 
@@ -26,10 +29,5 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Codespace
-It is fine to use the Linus Python interpreter directly, as you can delete Codepace and create new one if there is any problem easily.
-```
-pip install -r requirements.txt
-```
 
-![Open in Codespaces](https://classroom.github.com/assets/open-in-codespaces-abfff4d4e15f9e1bd8274d9a39a0befe03a0632bb0f153d0ec72ff541cedbe34.svg)
+
