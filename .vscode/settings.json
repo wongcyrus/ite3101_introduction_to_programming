@@ -1,13 +1,4 @@
 {
-    "python.testing.pytestArgs": [],
-    "python.testing.unittestEnabled": false,
-    "python.testing.pytestEnabled": true,
-    "python.analysis.extraPaths": [
-        "./tests/unit_test_helper"
-    ],
-    "python.linting.pylintArgs": [
-        "--disable=C0111"
-    ],
     "emeraldwalk.runonsave": {
         "autoClearConsole": true,
         "commands": [
@@ -22,5 +13,11 @@
         ]
     },
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 3000
+    "files.autoSaveDelay": 3000, 
+    "editor.formatOnSave": true,    
+    "editor.formatOnType": false,
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    }
 }

@@ -1,2 +1,2 @@
 API_KEY = ""
-API_ENDPOINT = 'https://api-pytest-runner-azure-2223.azure-api.net'
+API_ENDPOINT = 'https://gateway-8eur6cwg.ue.gateway.dev'
