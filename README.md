@@ -1,7 +1,13 @@
 # Python exercises
 
 ## Codespace
-You can click one the top Codespace icon and you will get a new Codespace. However, if you crash your Codespace, you still need to delete and re-create a new one. 
+You can click one the top Codespace icon and you will get a new Codespace. However, if you crash your Codespace, you still need to delete and re-create a new one.
+
+## Read Only for Tests
+If you want to full rebuild the container, you disable the read only files.
+```
+find tests -type f -name "*.py" -exec sudo chattr -i {} \;
+```
 
 ## Windows
 ### Change Powershell execution policy
@@ -20,7 +26,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-## macOS
+## MacOS
 
 Follow the above demo of Windows version, but you don't need to open Powershell to type that Execution Policy command. The same thing you have to do is to create virtual environment as you should not corrupt your Python in macOS. The code will be a bit different.
 ```
